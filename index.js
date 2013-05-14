@@ -159,7 +159,8 @@ function get_args() {
   }
 
   browserify_args = argv.splice(i+1, argv.length - i)
-
+  browserify_args.push('--debug')
+  
   argv[0] = argv[0].split(':')
   ENTRY_POINT_TARGET = argv[0][0]
   ENTRY_POINT_URL = argv[0][~~(1 % argv[0].length)]
